@@ -1,4 +1,4 @@
-# Problems for CP--2
+# Problems for CP--2/CP--3
 
 # R Topic: "Vectors, Factors, Built-in math/stat functions,
 #   Basic Base-R plots, sequences and series, plots, exercises
@@ -7,7 +7,7 @@
 # log, sum, exp, mean, max, median, min, 
 #    quantile, round, rank, signif, var, cor, sd
 
-# Exponents
+# Exponents, basic math operators +,-,*,/,^
 
 # inits
 aVector <- c(1,2,3,4,5)
@@ -19,14 +19,15 @@ eVector <- rep(1:2, each = 3)
 # Vector functions
 sortVector <- sort(aVector)
 revVector <- rev(aVector)
-counts <- table(aVector)
+counts <- table(aVector) # factors and table go together
 uniqueValues <- unique(aVector)
 
 # Factors, why bother? ;)
 # factor or cut
+# attributes, that 
 
 
-# Probability Topic: "Logic, Probability, and the risky arguements"
+# Probability Topic: "Logic, Probability, and "the risky arguments""
 # Logic operators in R
 aBoolean <- TRUE
 !aBoolean
@@ -35,9 +36,6 @@ aBoolean <- TRUE
 # <, <=, >, >=, ==, !=, !x, x|y, x&y, isTrue()
 
 # side note about || and &&
-
-### im running out a steeeeeeam ### 
-
 
 # example exercises
 
@@ -65,6 +63,8 @@ aBoolean <- TRUE
 #16 (trivial)
 # removing variables from the environment
 
+
+### PROBLEM DRAFTING ###
 # easy
 # 1. log and exp in R, pi
 a1.1 <- log(0) 
@@ -76,12 +76,14 @@ a6.1 <- log(e)
 a7.1 <- log(23^2023) #inf
 a8.1 <- 2023*log(23) #not inf...
 #a9 log reciprocal?
+#a10 how to change base of the log...
 
 b1.1 <- exp(1)
 b2.1 <- exp(0)
 # b3.1 more exponential examples... maybe not so worth it
 
 # 2. introduce logical operators
+# briefly, t/f, control flow intro
 
 # 3. vectors, init, 
 
@@ -100,3 +102,6 @@ b2.1 <- exp(0)
 # 1. missing data
 # 2. removing variables from the environment
 # 3. plots of exponential and log sequences 
+plotVec <- 1:100
+plot(plotVec,log(plotVec))
+plot(plotVec,exp(plotVec))
