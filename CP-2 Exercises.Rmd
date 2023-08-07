@@ -149,7 +149,7 @@ Write a function that prints a message citing a relativity sized river given a p
 - Des Moines River: 525 miles
 - Rio Grande River: 1896 miles
 
-Your function should report in the following format:
+Your function should return a string in the following format:
 A river X miles long is shorter than/longer than/exactly as long the "most similar river from above".
 
 ```{r}
@@ -160,23 +160,44 @@ riverReport <- function(miles) {
   
   bp1 <- (dm - fr)/2
   bp2 <- (rg - dm)/2
-   # this is wrong so far, many things will pass many checks... woooof
-  frName <- "Feather River"
-  dmName <- "Des Moines River"
-  rgName <- "Rio Grande River"
-  ifelse(miles == fr, print(paste("A river", miles, "miles long is exactly as long as", frName)),)
-  ifelse(miles == dm, print(paste("A river", miles, "miles long is exactly as long as", dmName)),)
-  ifelse(miles == rg, print(paste("A river", miles, "miles long is exactly as long as", rgName)),)
-  ifelse(miles < fr, print(paste("A river", miles, "miles long is exactly as long as", frName)),)
-  ifelse(miles > rg, print(paste("A river", miles, "miles long is exactly as long as", frName)),)
-  ifelse(miles == fr, print(paste("A river", miles, "miles long is exactly as long as", frName)),)
-  ifelse(miles == fr, print(paste("A river", miles, "miles long is exactly as long as", frName)),)
-  ifelse(miles == fr, print(paste("A river", miles, "miles long is exactly as long as", frName)),)
-  ifelse(miles == fr, print(paste("A river", miles, "miles long is exactly as long as", frName)),)
-  
+  frName <- "the Feather River."
+  dmName <- "the Des Moines River."
+  rgName <- "the Rio Grande River."
+  report <- NA
+  # miles < fr
+  if(miles < fr){report <- paste("A river", miles, "miles long is shorter than", frName)}
+  # miles == fr
+  if(miles == fr){report <- paste("A river", miles, "miles long is exactly as long as", frName)}
+  # fr < miles < bp1
+  if((miles > fr) & (miles < bp1)){report <- paste("A river", miles, "miles long is longer than", frName)}
+  # bp1 <= miles < dm
+  if((miles >= bp1) & (miles < dm)){report <- paste("A river", miles, "miles long is shorter than", dmName)}
+  # miles == dm
+  if(miles == dm){report <- paste("A river", miles, "miles long is exactly as long as", dmName)}
+  # dm < miles < bp2
+  if((miles > dm) & (miles < bp2)){report <- paste("A river", miles, "miles long is longer than", dmName)}
+  # bp2 <= miles < rg
+  if((miles >= bp2) & (miles < rg)){report <- paste("A river", miles, "miles long is shorter than", rgName)}
+  # miles == rg
+  if(miles == fr){report <- paste("A river", miles, "miles long is exactly as long as", rgName)}
+  # miles > rg
+  if(miles > rg){report <- paste("A river", miles, "miles long is longer than", rgName)}
+  print(report)
+  return(report)
+}
+```
+
+
+```{r}
+#tests
+riverReport(river301)
+sapply(rivers, riverReport)
 ```
 
 # basic R plot ex.
 
-Plot a histogram of rivers
+Plot a histogram of rivers, use R graph tool doodad
+```{r}
+hist(rivers)
+```
 
