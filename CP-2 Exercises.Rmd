@@ -1,0 +1,208 @@
+---
+title: "CP-2 Exercises"
+author: "Aidan O'Hara"
+date: "2023-08-05"
+output: pdf_document
+editor_options: 
+  markdown: 
+    wrap: 72
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+------------------------------------------------------------------------
+
+# variable assignment
+
+R uses the =, \<-, and -\> to assign objects to variable names.
+Assignment will always occur when using '\<-' like in 'x \<- 3' in any
+context '=' may appear in function calls wherein assignment will not
+occur but rather values will be assigned for the functional use. Anyway.
+
+See Advanced R 2nd edition, about lots of assignment specifics.
+
+# vectors
+
+explore vector inits, make some various vectors
+
+example inits
+
+```{r}
+aVector <- c(1,2,3,4,5)
+bVector <- 10:50
+cVector <- seq(2,3,by = 0.5)
+dVector <- rep(1:2, time = 3)
+eVector <- rep(1:2, each = 3)
+```
+
+# Exercise 1
+
+Create the vector (2,0,2,3) and assign it to `aVector`
+
+```{r}
+aVector <- c(2,0,2,3)
+```
+
+# Exercise 2
+
+-   Create the vector (20,19,18,17,16,...,0). Call your vector
+    `tweVector`
+
+-   Create the vector (2,1.9,1.8,1.7,1.6,...,0). Call your vector
+    `twe.Vector`
+
+-   Create the vector (2,2,2,2,2,2,2,2), use the rep function. Call your
+    vector `twoVector`
+
+```{r}
+tweVector <- 20:16
+twe.Vector <- seq(2,1.6,-0.1)
+twoVector <- rep(2, time = 8)
+```
+
+# Vector functions \# apply vector functions to the above vectors, maybe sort and reverse nested
+
+```{r}
+
+sortVector <- sort(aVector)
+revVector <- rev(aVector)
+counts <- table(aVector) # factors and table go together
+uniqueValues <- unique(aVector)
+
+### Append() also
+
+```
+
+# Exercise 3
+
+ Create a vector with the first 7 elements of pi. Call your vector `piVector`. After, using `rev` and `sort` create, `pieVector` with the `piVector` elements in decreasing order and `eipVector` with the elements in increasing order.  
+```{r}
+piVector <- c(3,1,4,1,5,9,3)
+eipVector <- sort(piVector)
+pieVector <- rev(eipVector)
+```
+
+
+# Vector element selection
+
+-[x] 
+-[-x] 
+-[x:y] 
+-[-(x:y)] 
+-[c(x,y)] 
+-[X %in% c(w,y,z)] \# returns elements w,y,z
+
+# Exercise 4
+Construct a vector called `megaVector` that contains the following elements:
+- the first and last element of `piVector`
+- the elements of `pieVector` equal to `3`
+- and the third and fourth elements of `eipVector`
+
+```{r}
+megaVector <- c(piVector[1],
+                piVector[7],
+                pieVector[pieVector %in% c(3)],
+                eipVector[3:4])
+```
+
+
+# built in math functions \# apply math functions to the vectors from above
+
+max/min mean sum var/sd cor(x,y) (too soon?)
+no interesting exercises...
+
+
+<!-- Calculate the following and assign the appropriate variables: -->
+<!-- ```{r} -->
+<!-- meanPie <- mean(piVector) -->
+<!-- ``` -->
+
+# Vector Math
+Vector multiplication intricacy. 
+
+# logical operators in R
+
+! & && (\|) and (\|\|) difference between element wise and general???
+
+[x == 5] [x \< 5]
+
+# Exercise 5
+Use logical operators in your vector selections to construct the following from the `rivers` vector:
+- `noMeanRivers` :Rivers less than 200 miles and rivers more than 600 miles
+- `river301` :Rivers that are exactly 301 miles long
+- ``specRivers` :Rivers between 100 and 200 miles, as well as rivers between 500 and 600 miles, do not include rivers equal to 135
+
+```{r}
+noMeanRivers <- rivers[(rivers < 200) | (rivers > 600)]
+river301 <- rivers[rivers == 301]
+specRivers <- rivers[(((rivers > 100) & (rivers < 200)) | ((rivers > 500) & (rivers < 600))) & (rivers != 135)]
+```
+
+
+# if/else/ifelse and your first function
+
+```{r}
+?ifelse
+# ifelse(test, yes, no)
+```
+
+# Exercise 6
+Write a function that prints a message citing a relativity sized river given a positive integer representing miles, use the following rivers as breakpoints:
+- Feather River: 73 miles
+- Des Moines River: 525 miles
+- Rio Grande River: 1896 miles
+
+Your function should return a string in the following format:
+A river X miles long is shorter than/longer than/exactly as long the "most similar river from above".
+
+```{r}
+riverReport <- function(miles) {
+  fr <- 73
+  dm <- 525
+  rg <- 1896
+  
+  bp1 <- (dm - fr)/2
+  bp2 <- (rg - dm)/2
+  frName <- "the Feather River."
+  dmName <- "the Des Moines River."
+  rgName <- "the Rio Grande River."
+  report <- NA
+  # miles < fr
+  if(miles < fr){report <- paste("A river", miles, "miles long is shorter than", frName)}
+  # miles == fr
+  if(miles == fr){report <- paste("A river", miles, "miles long is exactly as long as", frName)}
+  # fr < miles < bp1
+  if((miles > fr) & (miles < bp1)){report <- paste("A river", miles, "miles long is longer than", frName)}
+  # bp1 <= miles < dm
+  if((miles >= bp1) & (miles < dm)){report <- paste("A river", miles, "miles long is shorter than", dmName)}
+  # miles == dm
+  if(miles == dm){report <- paste("A river", miles, "miles long is exactly as long as", dmName)}
+  # dm < miles < bp2
+  if((miles > dm) & (miles < bp2)){report <- paste("A river", miles, "miles long is longer than", dmName)}
+  # bp2 <= miles < rg
+  if((miles >= bp2) & (miles < rg)){report <- paste("A river", miles, "miles long is shorter than", rgName)}
+  # miles == rg
+  if(miles == fr){report <- paste("A river", miles, "miles long is exactly as long as", rgName)}
+  # miles > rg
+  if(miles > rg){report <- paste("A river", miles, "miles long is longer than", rgName)}
+  print(report)
+  return(report)
+}
+```
+
+
+```{r}
+#tests
+riverReport(river301)
+sapply(rivers, riverReport)
+```
+
+# basic R plot ex.
+
+Plot a histogram of rivers, use R graph tool doodad
+```{r}
+hist(rivers)
+```
+
