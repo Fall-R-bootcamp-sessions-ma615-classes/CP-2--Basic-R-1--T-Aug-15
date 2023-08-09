@@ -1,0 +1,167 @@
+---
+title: "cp-2_assignments"
+format: html
+editor: visual
+---
+
+## 1
+```{r warning=FALSE, message=FALSE}
+
+library(tidyverse)
+library(magrittr)
+library(esquisse)
+options(digits = 3, scipen=999)
+
+```
+
+
+
+## Using git
+
+
+  1. configure git
+
+
+Although we will use git from within R, it is important to understand how git actually works without RStudio's supportive environment. 
+
+
+## Materials 
+git/github cheat sheet
+vi/vim cheat sheet
+Linux command cheat sheet
+
+
+
+## Workflow example 1
+
+  1. Make a folder in your MSSP assignment folder for Bootcamp Computing Assignments.  This will be something like
+  ~\bootcamp\sessions\CP 25\assignments\doc1
+  
+  2. Go into the folder and begin a text file.  I recommend using vi on the Mac and vim on Windows and Linux.
+  
+  3. In your browser go to <a href="https://www.lipsum.com/feed/html">lipsum.com</a>,    
+generate three paragraphs of dummy txt, paste it into your editor, and save your text file.
+  
+  4. Stay in the folder and start gitbash. Gitbash uses Linux commands.  Use pwd and ls to Verify that you're in the correct folder and that you can see the text file using the Linux.
+  
+  5. now initialize a local repository, check git status, add the files in the folder to the local repository,
+  
+  git init
+  git status
+  git add .
+  git status
+  git commit
+  
+  6.  On your browser open your github site.  You should have a github organization for each course you take.  In your bootcamp computing organization, create a repo for this assignment.  Make sure that you create a README fileg and commit it.  In the Code segment of your github repo copy the repo path
+  
+  7. Now go back to your local repo and set up the connection to your github repo.
+  
+  git remote orign path
+  
+  check that the connection has been extablished with 
+  
+  git remote -v
+  
+  8.  If the connection checks out, pull the contents of the github repo (which is just the README.md file)
+  
+  git pull origin
+  
+  you should see the README.me file
+  
+  ls
+  
+  9. Check the status
+  
+  git status
+  
+  10 push the local directory to github
+  
+  
+  
+## Workflow assignment 2
+
+
+  
+  
+  
+  
+
+  
+
+
+## simple function assignment
+
+
+
+
+Write an R function that calculates the variance of this sample of sensor data.  Note that this sensor only produces integer valued readings.
+
+```{r}
+readings1 = as.integer(runif(n = 50, min = 10, max = 90))
+
+## test is 1 -- function won't run if data is non-integral
+
+## test works regarless of n
+
+```
+
+
+## ploting assingment 
+
+Using mtcars, produce a plot of gas mileage vs engine displacement.
+
+## submit -- a variable containing the plot
+
+## submit -- a graphic file
+
+```{r}
+
+mtc <- as.data.frame(data(mtcars))
+
+vari <- function(data){
+  return(var(data))
+  }
+
+
+p <- ggplot(data=mtcars, aes(x=disp, y=mpg)) + geom_point() + geom_smooth()
+
+
+
+
+p1 <- plot(x=mtcars$disp, y = mtcars$mpg)
+
+
+
+```
+
+
+GUI for base graphics
+
+```{r}
+
+library(GrapheR)
+data(mtcars)
+run.GrapheR()
+
+
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+## test is 
+
+Produce a set of summary statistics for the gas mileage reported in mtcars
+
+
+
+
