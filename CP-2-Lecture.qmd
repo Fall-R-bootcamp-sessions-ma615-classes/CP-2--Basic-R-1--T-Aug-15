@@ -1,0 +1,114 @@
+---
+title: "CP-2-Lecture"
+format: revealjs
+editor: visual
+---
+
+# CP-2 Lecture
+
+# HAVILAND - HOUR 1
+
+# Variable Assignment
+
+*Explain that while = and \<- can be used interchangeabley most places, it is best to just use \<-*
+
+R uses the =, \<-, and -\> to assign objects to variable names. The assignment will always occur when using '\<-' like in 'x \<- 3' in any context '=' may appear in function calls wherein assignment will not occur but rather values will be assigned for the functional use. Anyway.
+
+# Vectors
+
+The simplest, most fundamental data structure in the language. They can be composed of various data types,
+
+A list of atomic data types in R:
+
+-   Numeric Integer
+
+-   Numeric Double
+
+-   Character
+
+-   Logical
+
+-   *Also Complex and Raw*
+
+# Vector Init
+
+Example vector initiations:
+
+```{r}
+?c # combine/ concatenate
+aVector <- c(1,2,3,4,5)
+bVector <- 10:50
+cVector <- seq(2,3,by = 0.5)
+dVector <- rep(1:2, time = 3)
+eVector <- rep(1:2, each = 3)
+
+
+flatVect <- c(1,3,c(1,4,c(98),5))
+```
+
+# Vector functions 
+
+apply vector functions to the above vectors, maybe sort and reverse nested
+
+```{r}
+
+sortVector <- sort(aVector)
+revVector <- rev(aVector)
+counts <- table(aVector) # factors and table go together
+uniqueValues <- unique(aVector)
+
+### Append() also
+
+```
+
+# Vector element selection
+
+-   \[x\]
+
+-   \[-x\]
+
+-   \[x:y\]
+
+-   \[-(x:y)\]
+
+-   \[c(x,y)\]
+
+-   \[X %in% c(w,y,z)\] *returns elements w,y,z*
+
+# Built-in Math Functions
+
+apply math functions to the vectors from above, math functions including.
+
+max/min mean sum var/sd cor(x,y), among other math functions, which can be called on an entire vector.
+
+# Vector Math
+
+Vector multiplication intricacy.
+
+# Logical Operators in R
+
+! & && (\|) and (\|\|) difference between element wise and general???
+
+\[x == 5\] \[x \< 5\]
+
+# if/else/ifelse and your first function
+
+```{r}
+?ifelse
+# ifelse(test, yes, no)
+
+if{}()
+
+if(){
+  
+} elseif {
+  
+} else {
+  
+}
+```
+
+```{r}
+yourFunction <- function(int) {}
+
+```
