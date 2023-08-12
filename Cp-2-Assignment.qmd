@@ -52,6 +52,19 @@ megaVector <- c(piVector[1],
                 eipVector[3:4])
 ```
 
+# Exercise 5
+Use logical operators in your vector selections to construct the following from the `rivers` vector:
+- `noMeanRivers` :Rivers less than 200 miles and rivers more than 600 miles
+- `river301` :Rivers that are exactly 301 miles long
+- ``specRivers` :Rivers between 100 and 200 miles, as well as rivers between 500 and 600 miles, do not include rivers equal to 135
+
+```{r}
+noMeanRivers <- rivers[(rivers < 200) | (rivers > 600)]
+river301 <- rivers[rivers == 301]
+specRivers <- rivers[(((rivers > 100) & (rivers < 200)) | ((rivers > 500) & (rivers < 600))) & (rivers != 135)]
+```
+
+
 # Exercise 6
 Write a function that prints a message citing a relativity sized river given a positive integer representing miles, use the following rivers as breakpoints:
 - Feather River: 73 miles
