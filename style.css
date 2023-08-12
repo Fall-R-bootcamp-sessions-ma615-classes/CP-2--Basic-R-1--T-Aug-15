@@ -1,0 +1,19 @@
+.title {
+  position:absolute; left:0px; top:-120px;
+  font-size: 60px !important;
+  color: red !important;
+}
+
+.quarto-title-author-name {
+  position:absolute; left:40px; bottom:-450px;
+  font-size: 40px;
+  color: #ffff66 !important;
+}
+
+.date {
+  position:absolute; left:700px; bottom:-450px;
+  font-size: 40px;
+  color: #ffff66 !important;
+}
+
+

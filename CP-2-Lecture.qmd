@@ -1,12 +1,22 @@
 ---
-title: "CP-2-Lecture"
-format: revealjs
-editor: visual
+title: "R Orientaion / Basic R Session I"
+author: "MSSP Bootcamp 2023"
+date: 08/14/2023
+format: 
+  revealjs:
+    theme: solarized
+title-slide-attributes:
+    data-background-image: "images/boston-reflection.jpg"
+    data-background-size: contain
+    data-background-opacity: "1"
+date-format: "DD MMM YYYY"
+css: style.css
+engine: knitr
 ---
 
-# CP-2 Lecture
 
-# HAVILAND - HOUR 1
+# <span style="font-weight:normal;font-size:48px ">R Orientation</span>
+
 
 # Variable Assignment
 
@@ -46,7 +56,7 @@ eVector <- rep(1:2, each = 3)
 flatVect <- c(1,3,c(1,4,c(98),5))
 ```
 
-# Vector functions 
+# Vector functions
 
 apply vector functions to the above vectors, maybe sort and reverse nested
 
@@ -93,19 +103,19 @@ Vector multiplication intricacy.
 
 # if/else/ifelse and your first function
 
-```{r}
+```{r }
 ?ifelse
 # ifelse(test, yes, no)
-
-if{}()
-
-if(){
-  
-} elseif {
-  
-} else {
-  
-}
+# 
+# if{}()
+# 
+# if(){
+#   
+# } elseif {
+#   
+# } else {
+#   
+# }
 ```
 
 ```{r}
