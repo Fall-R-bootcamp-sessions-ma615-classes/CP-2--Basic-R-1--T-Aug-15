@@ -1,0 +1,66 @@
+---
+title: "cp-2"
+author: "MSSP Bootcamlp"
+format: revealjs
+editor: visual
+---
+
+## R orientation {.scrollable}
+
+cheat sheet -- assignment folder for git classroom --- gradescope -- assignment packet
+
+?reading links --
+
+-   who, what, where, why, how
+-   
+-   list of R links
+    -   Big Book of R
+    -   Cran
+    -   R Bloggers
+    -   Booksown
+    -   W3
+    -   Posit
+    -   Bioconductor
+    -   R help system
+    
+    Git -i
+    SSH
+    git configuration
+    check for the name of the default branch
+    
+    
+
+## Data Structures
+
+table
+
+
+## test assignment
+
+vectors
+
+
+## assignment
+
+Use MT cars
+
+Summarize data -- assign it to a variable summary_mt
+
+make a plot using base r graphics
+
+make a plot using gglot  
+
+
+```{r}
+
+library(tidyverse)
+library(magrittr)
+library(esquisse)
+
+
+data(mtcars)
+
+
+
+
+```

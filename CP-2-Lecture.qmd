@@ -1,12 +1,92 @@
 ---
-title: "CP-2-Lecture"
-format: revealjs
-editor: visual
+title: "R Orientaion / Basic R Session I"
+author: "MSSP Bootcamp 2023"
+date: 08/14/2023
+format: 
+  revealjs:
+    theme: solarized
+title-slide-attributes:
+    data-background-image: "images/boston-reflection.jpg"
+    data-background-size: contain
+    data-background-opacity: "1"
+date-format: "DD MMM YYYY"
+css: style.css
+engine: knitr
 ---
 
-# CP-2 Lecture
 
-# HAVILAND - HOUR 1
+# <span style="font-weight:normal;font-size:48px ">R Orientation</span>
+
+## R -- a language written by and for statisticians {.scrollable}
+
+<div style="font-size: 24px">
+  1993  Ross Ihaka and Robert Gentleman begin work on R 
+  <!-- to support statistics courses at the University of Aukland.  
+  R runs S programs and borrows features from Scheme a functional language that is a Common Lisp implementation produced at the MIT AI Lab. -->
+  
+<!--  1995, statistician Martin Mächler convinced Ihaka and Gentleman to make R free and open-source under the GNU General Public License. -->
+  
+  1997 Version 0.60 released. Open-source. Free. GNU General Public License
+  
+  1997 Comprehensive R Archive Network (CRAN) was founded 
+  
+  <!-- in 1997 by Kurt Hornik and Fritz Leisch to host R's source code, executable files, documentation, and user-created packages.[18] -->
+  
+  
+  2000 1.0 version was released 
+  
+  2003 R Foundation founded 
+  
+  2005 ggplot2 released by Hadley Wickham. 
+  
+  <!-- Created by Hadley Wickham in 2005, ggplot2 is an implementation of Leland Wilkinson's Grammar of Graphics—a general scheme for data visualization which breaks up graphs into semantic components such as scales and layers. -->
+  
+  
+  
+  
+  2009 RStudio founded 
+  
+  <!-- on a "vision of creating high quality open-source software for data scientists." -->
+  
+  
+ 2011 R Studio IDE Released
+ 
+ 2012 Hadley Wickham joins RStudio.  
+ 
+ 2012 Shiny package is released.
+ 
+ 
+ 2014 [**Tidy Data**, Wickham, H. Journal of Statistical Software](https://www.jstatsoft.org/article/view/v059i10)
+      dplyr package is released. 
+ 
+ 2015 Boston University MSSP begins
+ 
+ 2016 [Tidyverse Manifesto](https://posit.co/blog/tidyverse-1-0-0/)
+ 
+ 2019 RStudio initiates support for Python and Jupyter Notebook 
+ 
+ 2020 RStudio qualifies as B Corporation -- in the Public Interest.
+ 
+ 2022 RStudio rebranded as Posit.  
+ 
+ 2022 Shiny for Python released.
+ 
+ 2023 CRAN package repository features 19902 available packages.
+ 
+ </div>
+ 
+## R at Bootcamp and MA615
+
+
+```{r fig.width=8,echo=FALSE}
+
+library(png)
+library(grid)
+
+img <- readPNG("images/Fall23-overview-3.png")
+grid.raster(img)
+```
+
 
 # Variable Assignment
 
@@ -46,7 +126,7 @@ eVector <- rep(1:2, each = 3)
 flatVect <- c(1,3,c(1,4,c(98),5))
 ```
 
-# Vector functions 
+# Vector functions
 
 apply vector functions to the above vectors, maybe sort and reverse nested
 
@@ -93,19 +173,19 @@ Vector multiplication intricacy.
 
 # if/else/ifelse and your first function
 
-```{r}
+```{r }
 ?ifelse
 # ifelse(test, yes, no)
-
-if{}()
-
-if(){
-  
-} elseif {
-  
-} else {
-  
-}
+# 
+# if{}()
+# 
+# if(){
+#   
+# } elseif {
+#   
+# } else {
+#   
+# }
 ```
 
 ```{r}
