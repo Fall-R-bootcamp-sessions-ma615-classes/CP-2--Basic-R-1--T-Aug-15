@@ -10,7 +10,7 @@ editor: visual
 
 # Variable Assignment
 
-*Explain that while = and \<- can be used interchangeably in most places, it is best to just use \<-*
+Explain that while = and can be used interchangeably in most places, it is best to just use 
 
 R uses the =, \<-, and -\> to assign objects to variable names. The assignment will always occur when using '\<-' like in 'x \<- 3' in any context '=' may appear in function calls wherein assignment will not occur but rather values will be assigned for the functional use. Anyway.
 
