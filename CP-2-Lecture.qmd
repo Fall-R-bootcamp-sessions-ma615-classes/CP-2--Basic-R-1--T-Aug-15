@@ -61,7 +61,7 @@ engine: knitr
  
  2015 Boston University MSSP begins
  
- 2016 [Tidyverse Manifesto](https://posit.co/blog/tidyverse-1-0-0/)
+ 2016 [**Tidyverse Manifesto**](https://posit.co/blog/tidyverse-1-0-0/)
  
  2019 RStudio initiates support for Python and Jupyter Notebook 
  
@@ -87,14 +87,46 @@ img <- readPNG("images/Fall23-overview-3.png")
 grid.raster(img)
 ```
 
+## R sites you should know  {.scrollable}
 
-# Variable Assignment
+<div style="font-size:28px">
+
+
+[CRAN: The Comprehensive R Archive Network](https://cran.r-project.org/)
+
+[Posit](https://posit.co/)
+
+
+[R Bloggers](https://www.r-bloggers.com/)
+
+[The Big Book of R](https://www.bigbookofr.com/)
+
+[Bookdown](https://bookdown.org/home/archive/)
+
+[StatLib Datasets](http://lib.stat.cmu.edu/datasets/)
+
+[Baseball Sabermetrics data](https://sabr.org/sabermetrics/data)
+
+
+ 
+Other sources of R Packages
+ 
+  - [A list from Posit](https://solutions.posit.co/envs-pkgs/environments/repositories/#other-cran-like-repositories)
+  
+  - [github explore](https://github.com/topics/r-package)
+  
+  - [rdrr.io: comprehensive index of r packages and documentation <br> from cran, bioconductor, github and r-forge.](https://rdrr.io/r/utils/available.packages.html)
+
+
+</div>
+
+## Variable Assignment
 
 Explain that while = and can be used interchangeably in most places, it is best to just use 
 
 R uses the =, \<-, and -\> to assign objects to variable names. The assignment will always occur when using '\<-' like in 'x \<- 3' in any context '=' may appear in function calls wherein assignment will not occur but rather values will be assigned for the functional use. Anyway.
 
-# Vectors
+## Vectors
 
 The simplest, most fundamental data structure in the language. They can be composed of various data types,
 
@@ -110,7 +142,7 @@ A list of atomic data types in R:
 
 -   *Also Complex and Raw*
 
-# Vector Init
+## Vector Init
 
 Example vector initiations:
 
@@ -126,7 +158,7 @@ eVector <- rep(1:2, each = 3)
 flatVect <- c(1,3,c(1,4,c(98),5))
 ```
 
-# Vector functions
+## Vector functions
 
 apply vector functions to the above vectors, maybe sort and reverse nested
 
@@ -141,7 +173,7 @@ uniqueValues <- unique(aVector)
 
 ```
 
-# Vector element selection
+## Vector element selection
 
 -   \[x\]
 
@@ -155,13 +187,13 @@ uniqueValues <- unique(aVector)
 
 -   \[X %in% c(w,y,z)\] *returns elements w,y,z*
 
-# Built-in Math Functions
+## Built-in Math Functions
 
 apply math functions to the vectors from above, math functions including.
 
 max/min mean sum var/sd cor(x,y), among other math functions, which can be called on an entire vector.
 
-# Vector Math
+## Vector Math
 
 Vector multiplication intricacy.
 
@@ -171,7 +203,7 @@ Vector multiplication intricacy.
 
 \[x == 5\] \[x \< 5\]
 
-# if/else/ifelse and your first function
+## if/else/ifelse and your first function
 
 ```{r }
 ?ifelse

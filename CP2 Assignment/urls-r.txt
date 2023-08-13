@@ -1,0 +1,14 @@
+https://www.google.com/search?q=r+packages+on+github&rlz=1C1GCEU_enUS1039US1039&oq=r+packages+on+github&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIICAEQABgWGB4yCAgCEAAYFhgeMggIAxAAGBYYHjIICAQQABgWGB4yCggFEAAYhgMYigUyCggGEAAYhgMYigUyBggHEEUYQDIGCAgQRRhAMgYICRBFGEDSAQg4MzAxajBqN6gCALACAA&sourceid=chrome&ie=UTF-8
+https://github.com/quarto-ext/fontawesome
+https://www.youtube.com/watch?v=LrJshtqccV0&list=PL0lo9MOBetEE0goMLEl97vO7slruNVj43&index=1&t=29s
+https://www.godaddy.com/whois/results.aspx?itc=dlp_domain_whois&domain=highyielddata&domainName=highyielddata.com&seeUnderlyingRegistryData=true
+https://www.google.com/search?q=use+renv+with+this+project&rlz=1C1GCEU_enUS1039US1039&oq=use+renv+w&gs_lcrp=EgZjaHJvbWUqBwgAEAAYgAQyBwgAEAAYgAQyBggBEEUYOTIICAIQABgWGB4yCAgDEAAYFhgeMggIBBAAGBYYHjIICAUQABgWGB4yCggGEAAYhgMYigXSAQg0NTc2ajBqN6gCALACAA&sourceid=chrome&ie=UTF-8
+https://rstudio.github.io/renv/articles/renv.html
+https://cran.r-project.org/
+https://www.google.com/search?q=r+package+sites&rlz=1C1GCEU_enUS1039US1039&oq=r+package+sites&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIHCAEQABiABDIHCAIQABiABDIHCAMQABiABDIHCAQQABiABDIHCAUQABiABDIHCAYQABiABDIHCAcQABiABDIHCAgQABiABDIHCAkQABiABNIBCTEyODAyajBqN6gCALACAA&sourceid=chrome&ie=UTF-8#ip=1
+https://www.oreilly.com/library/view/r-in-a/9781449358204/ch04s04.html
+https://www.bioconductor.org/
+https://pkgdown.r-lib.org/
+https://r-pkgs.org/website.html
+https://www.bioconductor.org/
+
