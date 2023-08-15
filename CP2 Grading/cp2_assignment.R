@@ -1,71 +1,58 @@
----
-title: "CP-2-Assignment"
-format: pdf
-editor: visual
----
 
 # Cp-2 Assignment
 
 # Exercise 1
 
-Create the vector (2,0,2,3) and assign it to `aVector`
+# Create the vector (2,0,2,3) and assign it to `aVector`
 
-```{r}
 aVector <- c(2,0,2,3)
-```
+
 
 # Exercise 2
 
--   Create the vector (20,19,18,17,16,...,0). Call your vector `tweVector`
+# Create the vector (20,19,18,17,16,...,0). Call your vector `tweVector`
 
--   Create the vector (2,1.9,1.8,1.7,1.6,...,0). Call your vector `twe.Vector`
+# Create the vector (2,1.9,1.8,1.7,1.6,...,0). Call your vector `twe.Vector`
 
--   Create the vector (2,2,2,2,2,2,2,2), use the rep function. Call your vector `twoVector`
+# Create the vector (2,2,2,2,2,2,2,2), use the rep function. Call your vector `twoVector`
 
-```{r}
 tweVector <- 20:16
 twe.Vector <- seq(2,1.6,-0.1)
 twoVector <- rep(2, time = 8)
-```
+
 
 # Exercise 3
 
-Create a vector with the first 7 elements of pi. Call your vector `piVector`. After, using `rev` and `sort` create, `pieVector` with the `piVector` elements in decreasing order and `eipVector` with the elements in increasing order.
+#Create a vector with the first 7 elements of pi. Call your vector `piVector`. After, using `rev` and `sort` create, `pieVector` with the `piVector` elements in decreasing order and `eipVector` with the elements in increasing order.
 
-```{r}
 piVector <- c(3,1,4,1,5,9,3)
 eipVector <- sort(piVector)
 pieVector <- rev(eipVector)
-```
 
 # Exercise 4
 
-Construct a vector called `megaVector` that contains the following elements: - the first and last element of `piVector` - the elements of `pieVector` equal to `3` - and the third and fourth elements of `eipVector`
+# Construct a vector called `megaVector` that contains the following elements: - the first and last element of `piVector` - the elements of `pieVector` equal to `3` - and the third and fourth elements of `eipVector`
 
-```{r}
 megaVector <- c(piVector[1],
                 piVector[7],
                 pieVector[pieVector %in% c(3)],
                 eipVector[3:4])
-```
+
 
 # Exercise 5
 
-Use logical operators in your vector selections to construct the following from the `rivers` vector: - `noMeanRivers` :Rivers less than 200 miles and rivers more than 600 miles - `river301` :Rivers that are exactly 301 miles long - \``specRivers` :Rivers between 100 and 200 miles, as well as rivers between 500 and 600 miles, do not include rivers equal to 135
+# Use logical operators in your vector selections to construct the following from the `rivers` vector: - `noMeanRivers` :Rivers less than 200 miles and rivers more than 600 miles - `river301` :Rivers that are exactly 301 miles long - \``specRivers` :Rivers between 100 and 200 miles, as well as rivers between 500 and 600 miles, do not include rivers equal to 135
 
-```{r}
 noMeanRivers <- rivers[(rivers < 200) | (rivers > 600)]
 river301 <- rivers[rivers == 301]
 specRivers <- rivers[(((rivers > 100) & (rivers < 200)) | ((rivers > 500) & (rivers < 600))) & (rivers != 135)]
-```
 
 # Exercise 6
 
-Write a function that prints a message citing a relativity sized river given a positive integer representing miles, use the following rivers as breakpoints: - Feather River: 73 miles - Des Moines River: 525 miles - Rio Grande River: 1896 miles
+# Write a function that prints a message citing a relativity sized river given a positive integer representing miles, use the following rivers as breakpoints: - Feather River: 73 miles - Des Moines River: 525 miles - Rio Grande River: 1896 miles
 
-Your function should return a string in the following format: A river X miles long is shorter than/longer than/exactly as long the "most similar river from above".
+# Your function should return a string in the following format: A river X miles long is shorter than/longer than/exactly as long the "most similar river from above".
 
-```{r}
 riverReport <- function(miles) {
   fr <- 73
   dm <- 525
@@ -97,10 +84,4 @@ riverReport <- function(miles) {
   if(miles > rg){report <- paste("A river", miles, "miles long is longer than", rgName)}
   return(report)
 }
-```
 
-```{r}
-#tests
-riverReport(river301)
-sapply(rivers, riverReport)
-```
